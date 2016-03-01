@@ -23,7 +23,6 @@ pub struct VM {
     state: State,
     references: ForwardReferences,
     evals: Option<Vec<fn(&mut VM, token: &str) -> Result<(), Exception>>>,
-    #[deprecated]
     pub extensions: HashMap<&'static str, Box<Extension>>,
 }
 
